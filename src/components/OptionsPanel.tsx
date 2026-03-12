@@ -23,10 +23,11 @@ export const OptionsPanel: React.FC<OptionsPanelProps> = ({ onClose, onSelectOpt
       </div>
       <ul className="space-y-4">
         <li
-          className="p-4 bg-zinc-800 rounded-lg cursor-pointer hover:bg-zinc-700 text-white"
+          className="p-4 bg-zinc-800 rounded-lg cursor-pointer hover:bg-zinc-700 text-white flex justify-between items-center"
           onClick={() => onSelectOption('Artificial intelligence')}
         >
-          Artificial intelligence
+          <span>Artificial intelligence</span>
+          <span className="px-2 py-0.5 text-[10px] bg-emerald-500 text-white rounded-full font-bold uppercase tracking-wider">Beta</span>
         </li>
       </ul>
     </motion.div>
