@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Element, Recipe, BoardItem } from '../types';
-import { saveDiscovery, loadDiscovery } from '../db';
+import { saveProgress, loadProgress } from '../db';
 
 const INITIAL_ELEMENTS: Element[] = [
   { id: 'water', name: 'Water', emoji: '💧', tier: 0 },
@@ -19,11 +19,17 @@ export function useCrafting() {
   const [styleModule, setStyleModule] = useState<any>({});
   const [currentTier, setCurrentTier] = useState(1);
 
-  // Load initial discovery from IndexedDB
+  // Load initial progress from IndexedDB
   useEffect(() => {
-    loadDiscovery().then(saved => {
-      if (saved && saved.length > 0) {
-        setDiscoveredElements(saved);
+    loadProgress().then(progress => {
+      if (progress.discoveredElements && progress.discoveredElements.length > 0) {
+        setDiscoveredElements(progress.discoveredElements);
+      }
+      if (progress.boardItems) {
+        setBoardItems(progress.boardItems);
+      }
+      if (progress.currentTier) {
+        setCurrentTier(progress.currentTier);
       }
       setIsLoaded(true);
     });
@@ -81,12 +87,12 @@ export function useCrafting() {
     return recipeMap.get(key);
   }, [recipeMap]);
 
-  // Save to IndexedDB whenever discovery changes
+  // Save to IndexedDB whenever progress changes
   useEffect(() => {
     if (isLoaded) {
-      saveDiscovery(discoveredElements);
+      saveProgress(discoveredElements, boardItems, currentTier);
     }
-  }, [discoveredElements, isLoaded]);
+  }, [discoveredElements, boardItems, currentTier, isLoaded]);
 
   const addElementToBoard = useCallback((element: Element, x: number, y: number) => {
     const newItem: BoardItem = {
