@@ -3,6 +3,7 @@ import { Element } from '../types';
 import { Search, X, Database, ClipboardList } from 'lucide-react';
 import { getStatusInfo, openRecipeViewer } from '../status';
 import { openRecipeTracker } from '../tracker';
+import { CONFIG_MODE } from '../active';
 
 interface SidebarProps {
   discoveredElements: Element[];
@@ -19,6 +20,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ discoveredElements, onAddEleme
   );
 
   const { count, statusColor, warning } = getStatusInfo();
+  const hideTrackerAndDb = CONFIG_MODE === 'T';
 
   return (
     <div className="w-full md:w-80 h-full bg-zinc-900 border-t md:border-t-0 md:border-l border-white/5 flex flex-col shadow-2xl">
@@ -52,24 +54,28 @@ export const Sidebar: React.FC<SidebarProps> = ({ discoveredElements, onAddEleme
               Toolkit ({discoveredElements.length})
             </span>
             <div className="flex items-center gap-1">
-              <button 
-                onClick={openRecipeTracker}
-                className="flex items-center gap-1.5 px-2 py-1.5 bg-zinc-800 border border-white/5 rounded-lg hover:bg-zinc-700 transition-all text-zinc-400 hover:text-white"
-                title="Recipe Tracker"
-              >
-                <ClipboardList className="w-3.5 h-3.5" />
-                <span className="text-[10px] font-mono uppercase tracking-tighter">Tracker</span>
-              </button>
-              <button 
-                onClick={openRecipeViewer}
-                className={`flex items-center gap-1.5 px-2 py-1.5 bg-zinc-800 border border-white/5 rounded-lg hover:bg-zinc-700 transition-all group relative`}
-                title={warning || "View all recipes"}
-              >
-                <Database className={`w-3.5 h-3.5 ${statusColor}`} />
-                <span className={`text-[10px] font-mono font-bold ${statusColor}`}>
-                  {count}
-                </span>
-              </button>
+              {!hideTrackerAndDb && (
+                <>
+                  <button 
+                    onClick={openRecipeTracker}
+                    className="flex items-center gap-1.5 px-2 py-1.5 bg-zinc-800 border border-white/5 rounded-lg hover:bg-zinc-700 transition-all text-zinc-400 hover:text-white"
+                    title="Recipe Tracker"
+                  >
+                    <ClipboardList className="w-3.5 h-3.5" />
+                    <span className="text-[10px] font-mono uppercase tracking-tighter">Tracker</span>
+                  </button>
+                  <button 
+                    onClick={openRecipeViewer}
+                    className={`flex items-center gap-1.5 px-2 py-1.5 bg-zinc-800 border border-white/5 rounded-lg hover:bg-zinc-700 transition-all group relative`}
+                    title={warning || "View all recipes"}
+                  >
+                    <Database className={`w-3.5 h-3.5 ${statusColor}`} />
+                    <span className={`text-[10px] font-mono font-bold ${statusColor}`}>
+                      {count}
+                    </span>
+                  </button>
+                </>
+              )}
               <button 
                 onClick={() => setIsSearching(true)}
                 className="p-2 bg-zinc-800 border border-white/5 rounded-lg text-zinc-400 hover:text-white transition-colors"
