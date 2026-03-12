@@ -1,0 +1,100 @@
+/* Consolidated Styles for All Elements */
+
+.element_water { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
+.element_fire { background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%); box-shadow: 0 0 15px rgba(239, 68, 68, 0.4); }
+.element_earth { background: linear-gradient(135deg, #78350f 0%, #451a03 100%); box-shadow: 0 0 15px rgba(120, 53, 15, 0.4); }
+.element_air { background: linear-gradient(135deg, #94a3b8 0%, #475569 100%); box-shadow: 0 0 15px rgba(148, 163, 184, 0.4); }
+
+.element_mud { background: linear-gradient(135deg, #713f12 0%, #422006 100%); }
+.element_lava { background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%); animation: pulse 2s infinite; }
+.element_smoke { background: linear-gradient(135deg, #64748b 0%, #334155 100%); opacity: 0.8; }
+.element_mist { background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%); backdrop-filter: blur(4px); }
+.element_dust { background: linear-gradient(135deg, #a8a29e 0%, #57534e 100%); }
+.element_steam { background: linear-gradient(135deg, #e2e8f0 0%, #94a3b8 100%); }
+.element_lake { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); }
+.element_sun { background: radial-gradient(circle, #facc15 0%, #ea580c 100%); box-shadow: 0 0 20px #f59e0b; }
+.element_mountain { background: linear-gradient(135deg, #475569 0%, #1e293b 100%); }
+.element_wind { background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%); animation: wind-sway 3s ease-in-out infinite; }
+
+.element_brick { background: linear-gradient(135deg, #991b1b 0%, #450a0a 100%); border: 2px solid #7f1d1d; }
+.element_cloud { background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%); color: #334155; }
+.element_rain { background: linear-gradient(180deg, #60a5fa 0%, #2563eb 100%); }
+.element_rainbow { background: linear-gradient(45deg, #ef4444, #f59e0b, #10b981, #3b82f6, #6366f1, #8b5cf6); background-size: 200% 200%; animation: rainbow-flow 4s linear infinite; }
+.element_volcano { background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 50%, #f97316 100%); }
+.element_fog { background: #94a3b8; filter: blur(1px); }
+.element_evaporation { background: rgba(255, 255, 255, 0.1); border: 1px dashed rgba(255, 255, 255, 0.3); }
+.element_plant { background: linear-gradient(135deg, #4ade80 0%, #166534 100%); }
+.element_flower { background: linear-gradient(135deg, #f472b6 0%, #be185d 100%); }
+.element_tree { background: linear-gradient(135deg, #15803d 0%, #064e3b 100%); }
+
+.element_ocean { background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%); }
+.element_range { background: linear-gradient(135deg, #475569 0%, #1e293b 100%); border-top: 3px solid #f8fafc; }
+.element_sand { background: linear-gradient(135deg, #fde047 0%, #ca8a04 100%); }
+.element_glass { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.4); }
+.element_beach { background: linear-gradient(45deg, #fde047 0%, #0ea5e9 100%); }
+.element_stone { background: linear-gradient(135deg, #57534e 0%, #292524 100%); }
+.element_metal { background: linear-gradient(135deg, #94a3b8 0%, #334155 100%); border: 1px solid #cbd5e1; }
+.element_pebble { background: #44403c; border-radius: 50%; }
+.element_sandstone { background: linear-gradient(135deg, #d97706 0%, #78350f 100%); }
+.element_obsidian { background: linear-gradient(135deg, #09090b 0%, #18181b 100%); border: 1px solid #3f3f46; }
+.element_energy { background: linear-gradient(135deg, #facc15 0%, #eab308 100%); animation: energy-pulse 1s infinite; }
+.element_acid_rain { background: linear-gradient(180deg, #4ade80 0%, #166534 100%); opacity: 0.9; }
+
+.element_storm { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); animation: lightning 5s infinite; }
+.element_hurricane { background: radial-gradient(circle, #334155 0%, #0f172a 100%); animation: spin 2s linear infinite; }
+.element_solar_flare { background: radial-gradient(circle, #facc15 0%, #ea580c 100%); box-shadow: 0 0 30px #f59e0b; }
+.element_soil { background: #451a03; }
+.element_swamp { background: linear-gradient(135deg, #064e3b 0%, #022c22 100%); }
+.element_peat { background: #27272a; }
+.element_coal { background: #09090b; border: 1px solid #27272a; }
+.element_diamond { background: linear-gradient(135deg, #e0f2fe 0%, #7dd3fc 100%); box-shadow: 0 0 25px rgba(125, 211, 252, 0.6); animation: shine 2s infinite; }
+.element_steel { background: linear-gradient(135deg, #475569 0%, #1e293b 100%); border: 2px solid #94a3b8; }
+.element_charcoal { background: #18181b; }
+.element_electricity { background: linear-gradient(135deg, #fef08a 0%, #facc15 100%); box-shadow: 0 0 15px #fef08a; }
+.element_light_bulb { background: #fef9c3; color: #854d0e; }
+.element_lamp { background: #fde68a; }
+.element_wire { background: #3f3f46; height: 4px; }
+.element_fiber_optics { background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899); background-size: 200% 100%; animation: rainbow-flow 2s linear infinite; }
+
+.element_star { background: radial-gradient(circle, #ffffff 0%, #fef08a 100%); box-shadow: 0 0 15px #ffffff; }
+.element_galaxy { background: radial-gradient(circle, #1e1b4b 0%, #0f172a 100%); box-shadow: 0 0 20px #4338ca; }
+.element_universe { background: #000000; border: 1px solid #1e1b4b; }
+.element_multiverse { background: #000000; animation: multiverse-glow 5s infinite; }
+
+.element_life { background: linear-gradient(135deg, #4ade80 0%, #3b82f6 100%); }
+.element_human { background: #fef3c7; color: #92400e; }
+.element_fish { background: #60a5fa; }
+.element_bird { background: #f87171; }
+.element_family { background: #fdf2f8; color: #9d174d; }
+.element_tool { background: #71717a; }
+.element_machine { background: #52525b; }
+.element_robot { background: #d1d5db; border: 2px solid #9ca3af; }
+.element_cyborg { background: linear-gradient(135deg, #d1d5db 0%, #3b82f6 100%); }
+
+.element_farmer { background: #d9f99d; color: #365314; }
+.element_food { background: #fecaca; }
+.element_statue { background: #a8a29e; }
+.element_house { background: #ffedd5; color: #9a3412; }
+.element_village { background: #fef3c7; }
+.element_city { background: #e2e8f0; }
+.element_metropolis { background: #cbd5e1; }
+
+.element_day { background: #fef9c3; color: #854d0e; }
+.element_night { background: #1e1b4b; color: #e0e7ff; }
+.element_moon { background: #f1f5f9; color: #475569; }
+.element_eclipse { background: #000000; border: 2px solid #facc15; }
+.element_tide { background: #1d4ed8; }
+
+.element_hope { background: #fef3c7; box-shadow: 0 0 20px #fde68a; }
+.element_dream { background: #e0e7ff; opacity: 0.8; }
+.element_nightmare { background: #450a0a; color: #fecaca; }
+.element_future { background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%); }
+
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); box-shadow: 0 0 20px rgba(220, 38, 38, 0.6); } 100% { transform: scale(1); } }
+@keyframes wind-sway { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+@keyframes rainbow-flow { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+@keyframes energy-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+@keyframes lightning { 0%, 95%, 100% { background: #1e293b; } 97% { background: #475569; } }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes shine { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(1.3); } }
+@keyframes multiverse-glow { 0%, 100% { box-shadow: 0 0 10px #4338ca; } 50% { box-shadow: 0 0 30px #db2777; } }
