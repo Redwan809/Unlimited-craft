@@ -9,6 +9,7 @@ import { useCrafting } from './hooks/useCrafting';
 import { MoreMenu } from './components/more';
 import { OptionsPanel } from './components/OptionsPanel';
 import { AISelection } from './ai';
+import { Into } from './components/into';
 
 export default function App() {
     const {
@@ -28,6 +29,7 @@ export default function App() {
   const [feedback, setFeedback] = useState<{ message: string, type: 'success' | 'error' | null }>({ message: '', type: null });
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [isAISelectionOpen, setIsAISelectionOpen] = useState(false);
+  const [showIntro, setShowIntro] = useState(true);
   const boardRef = useRef<HTMLDivElement>(null);
   const feedbackTimerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -154,6 +156,10 @@ export default function App() {
         </div>
       </div>
     );
+  }
+
+  if (showIntro) {
+    return <Into onComplete={() => setShowIntro(false)} />;
   }
 
   return (
