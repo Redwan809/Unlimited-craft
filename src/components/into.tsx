@@ -29,7 +29,7 @@ export const Into: React.FC<IntoProps> = ({ onComplete }) => {
         transition={{ delay: 0.2, duration: 0.8 }}
         className="text-4xl md:text-6xl font-bold tracking-tighter italic serif text-white"
       >
-        Infinite Craft
+        Unfinite Craft
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}

@@ -172,7 +172,7 @@ export default function App() {
         {/* Header - Fixed and non-blocking */}
         <div className="absolute top-4 left-4 md:top-6 md:left-6 z-50 pointer-events-none select-none flex items-center gap-4">
           <h1 className="text-xl md:text-2xl font-bold tracking-tighter italic serif text-white/90 drop-shadow-md">
-            Infinite Craft
+            Unfinite Craft
           </h1>
           <div className="pointer-events-auto">
             <MoreMenu onOpenPanel={() => setIsPanelOpen(true)} />
